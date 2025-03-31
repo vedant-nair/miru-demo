@@ -1,0 +1,4 @@
+output_gpio: 12
+control_pin: 25
+frequency_hz: 500
+brightness_percent: 75
