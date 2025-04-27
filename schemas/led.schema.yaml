@@ -1,4 +1,5 @@
 $schema: "http://json-schema.org/draft-07/schema#"
+$miru_config_slug: "led"
 title: LED Configuration Schema
 type: object
 required:
