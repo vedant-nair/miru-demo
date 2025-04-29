@@ -1,25 +1,20 @@
 $miru_config_slug: "robot-features"
 $schema: "https://json-schema.org/draft/2020-12/schema"
-description: "Configuration for feature toggles and behavior parameters on a robot."
 type: object
 properties:
   enable_autonomy:
     type: boolean
-    description: "Enable full autonomous navigation mode."
     default: true
   enable_remote_control:
     type: boolean
-    description: "Allow operator remote control override."
     default: true
   max_payload_kg:
     type: number
-    description: "Maximum payload the robot can carry safely, in kilograms."
     minimum: 0
     maximum: 100
     default: 10.0
   preferred_speed_mode:
     type: string
-    description: "Preferred speed profile."
     enum:
       - slow
       - normal
@@ -27,23 +22,19 @@ properties:
     default: "normal"
   emergency_stop_sensitivity:
     type: number
-    description: "Emergency stop trigger sensitivity (0 to 1, higher is more sensitive)."
     minimum: 0.0
     maximum: 1.0
     default: 0.8
   telemetry:
     type: object
-    description: "Telemetry-related configuration."
     properties:
       upload_interval_sec:
         type: integer
-        description: "Interval in seconds for uploading telemetry data."
         minimum: 10
         maximum: 600
         default: 60
       heartbeat_interval_sec:
         type: integer
-        description: "Interval in seconds between heartbeat pings."
         minimum: 1
         maximum: 60
         default: 10
