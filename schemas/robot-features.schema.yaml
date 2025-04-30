@@ -1,4 +1,4 @@
-$miru_config_slug: "robot-features-v"
+$miru_config_slug: "robot-features"
 $schema: "https://json-schema.org/draft/2020-12/schema"
 type: object
 properties:
@@ -11,7 +11,7 @@ properties:
   max_payload_kg:
     type: number
     minimum: 0
-    maximum: 99
+    maximum: 100
     default: 10.0
   preferred_speed_mode:
     type: string
