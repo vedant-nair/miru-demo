@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.16)
 project(miru-sdk-example)
 
 # Set C++ standard
@@ -7,18 +7,25 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(MIRU_FETCH_BOOST ON)
-include(FetchContent)
+set(MIRU_BUILD_TESTS OFF)
+set(MIRU_BUILD_EXAMPLES OFF)
 
+# use FetchContent to download and build miru
+include(FetchContent)
 FetchContent_Declare(
     miru
     GIT_REPOSITORY https://github.com/miruml/cpp-sdk.git 
     GIT_TAG main
 )
-
-set(MIRU_BUILD_TESTS OFF)
-set(MIRU_BUILD_EXAMPLES OFF)
-
 FetchContent_MakeAvailable(miru)
 
+# # use add_subdirectory to add miru as a subdirectory
+# add_subdirectory("/home/ben/miru/sdk/cpp" "${CMAKE_BINARY_DIR}/miru")
+
+# development example
 add_executable(development-example examples/development/main.cpp)
 target_link_libraries(development-example PRIVATE miru::miru)
+
+# production example
+add_executable(production-example examples/production/main.cpp)
+target_link_libraries(production-example PRIVATE miru::miru)
