@@ -7,7 +7,6 @@
 #include <miru/query/ros2.hpp>
 
 int main() {
-
     miru::config::Config config = miru::config::Config::from_agent(
         "../schemas/led.schema.yaml"
     );
