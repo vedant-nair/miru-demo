@@ -1,0 +1,11 @@
+title: deployment_env
+type: object
+properties:
+  obstacle_avoidance_enabled:
+    type: boolean
+  navigation_mode:
+    type: string
+    enum: [conservative, balanced, aggressive]
+required:
+  - obstacle_avoidance_enabled
+  - navigation_mode

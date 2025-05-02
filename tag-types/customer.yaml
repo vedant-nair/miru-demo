@@ -1,7 +1,0 @@
-title: Customer Metadata
-type: object
-properties:
-  telemetry_interval_sec:
-    type: integer
-required:
-  - telemetry_interval_sec
