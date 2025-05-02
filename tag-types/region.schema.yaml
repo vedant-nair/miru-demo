@@ -1,3 +1,4 @@
+title: region
 type: object
 properties:
   telemetry_upload_interval_sec:
