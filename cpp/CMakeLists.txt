@@ -25,11 +25,5 @@ FetchContent_MakeAvailable(miru)
 # # use add_subdirectory to add miru as a subdirectory
 # add_subdirectory("/home/ben/miru/sdk/cpp" "${CMAKE_BINARY_DIR}/miru")
 
-
-# development example
-add_executable(development-example examples/development/main.cpp)
-target_link_libraries(development-example PRIVATE miru::miru Threads::Threads)
-
-# production example
-add_executable(production-example examples/production/main.cpp)
-target_link_libraries(production-example PRIVATE miru::miru Threads::Threads)
+# build the examples
+add_subdirectory(examples)

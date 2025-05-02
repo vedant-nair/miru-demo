@@ -20,5 +20,5 @@ cmake --build build
 Run an example
 
 ```bash
-./build/development-example
+./build/examples/development/development-example
 ```
