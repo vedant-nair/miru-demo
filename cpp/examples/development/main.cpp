@@ -2,11 +2,16 @@
 #include <iostream>
 
 // miru
+#include <miru/version.hpp>
+#include <miru/commit.hpp>
 #include <miru/config/config.hpp>
 #include <miru/query/query.hpp>
 #include <miru/query/ros2.hpp>
 
 int main() {
+    std::cout << "miru version: " << MIRU_VERSION << std::endl;
+    std::cout << "miru commit: " << MIRU_COMMIT << std::endl;
+
     miru::config::Config config = miru::config::Config::from_file(
         "../schemas/led.schema.yaml",
         "../configs/led.yaml"
