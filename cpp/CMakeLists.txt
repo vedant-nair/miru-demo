@@ -6,24 +6,21 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-set(MIRU_FETCH_BOOST ON)
-set(MIRU_BUILD_TESTS OFF)
-set(MIRU_BUILD_EXAMPLES OFF)
-
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
 # use FetchContent to download and build miru
+set(MIRU_FETCH_BOOST ON)
+set(MIRU_BUILD_TESTS OFF)
+set(MIRU_BUILD_EXAMPLES OFF)
+
 include(FetchContent)
 FetchContent_Declare(
     miru
     GIT_REPOSITORY https://github.com/miruml/cpp-sdk.git 
-    GIT_TAG main
+    GIT_TAG main # replace with desired tag/branch/commit
 )
 FetchContent_MakeAvailable(miru)
 
-# # use add_subdirectory to add miru as a subdirectory
-# add_subdirectory("/home/ben/miru/sdk/cpp" "${CMAKE_BINARY_DIR}/miru")
-
-# build the examples
+# build the examples copied from the miru repository
 add_subdirectory(examples)

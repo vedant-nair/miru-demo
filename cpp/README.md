@@ -8,17 +8,31 @@ git clone https://github.com/miruml/getting-started.git
 cd getting-started/cpp
 ```
 
-Build the examples (located in the `/cpp/examples` directory).
+Initialize the build directory and copy the examples to the `/cpp` directory. You can find these examples in the [Miru C++ SDK](https://github.com/miruml/cpp-sdk/tree/main/examples) repository.
 
 ```bash
 cmake -B build -S .
 ```
+
+```bash
+cp -r ./build/_deps/miru-src/examples ./
+```
+
+Build the examples
 ```bash
 cmake --build build
 ```
 
-Run an example
+Examples should be executed from the `/cpp` directory so that the file system paths evaluate correctly. All examples can be executed using the following pattern.
 
 ```bash
-./build/examples/development/development-example
+./build/examples/<examples-directory-name>/<example-binary-name>
 ```
+
+For instance, the `from_file` example is executed by invoking
+
+```bash
+./build/examples/from_file/from-file
+```
+
+from the root of the repository. The binary name is simply the example directory name with the underscores (`_`) replaced with hyphens (`-`)
