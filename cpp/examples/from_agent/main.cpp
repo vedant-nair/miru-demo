@@ -2,7 +2,7 @@
 #include <iostream>
 
 // miru
-#include <miru/config/config.hpp>
+#include <miru/configs/instance.hpp>
 #include <miru/query/query.hpp>
 
 
@@ -25,13 +25,13 @@ int main() {
     // In general we recommend using absolute paths.
     std::string schema_path = "../schemas/mobility.schema.yaml";
 
-    miru::config::Config config = miru::config::Config::from_agent(
+    miru::config::ConfigInstance config_instance = miru::config::ConfigInstance::from_agent(
         schema_path
     );
 
     // list all the parameters in the config
     print_params(
-        miru::query::list_params(config),
+        miru::query::list_params(config_instance),
         "Parameters from Agent"
     );
 }

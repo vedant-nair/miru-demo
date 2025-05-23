@@ -2,7 +2,7 @@
 #include <iostream>
 
 // miru
-#include <miru/config/config.hpp>
+#include <miru/configs/instance.hpp>
 #include <miru/params/type.hpp>
 #include <miru/query/query.hpp>
 
@@ -24,16 +24,16 @@ int main() {
     // this from the root of the repository for these file paths to be properly defined.
     // In general we recommend using absolute paths.
     std::string config_schema_path = "../schemas/mobility.schema.yaml";
-    std::string concrete_config_path = "../configs/mobility.yaml";
+    std::string config_instance_path = "../instances/mobility.instance.yaml";
 
     // retrieve a concrete config from a file
-    miru::config::Config config = miru::config::Config::from_file(
+    miru::config::ConfigInstance config_instance = miru::config::ConfigInstance::from_file(
         config_schema_path,
-        concrete_config_path
+        config_instance_path
     );
 
     print_params(
-        miru::query::list_params(config),
+        miru::query::list_params(config_instance),
         "Printing Parameters From File"
     );
 }

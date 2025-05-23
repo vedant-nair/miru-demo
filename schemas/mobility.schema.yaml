@@ -1,4 +1,4 @@
-$miru_config_slug: "mobility"
+$miru_config_type_slug: "mobility"
 $schema: "https://json-schema.org/draft/2020-12/schema"
 title: Mobility
 type: object

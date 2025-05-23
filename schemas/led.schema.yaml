@@ -1,4 +1,4 @@
-$miru_config_slug: "led"
+$miru_config_type_slug: "led"
 title: LED Configuration Schema
 type: object
 required:
