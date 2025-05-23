@@ -18,7 +18,7 @@ include(FetchContent)
 FetchContent_Declare(
     miru
     GIT_REPOSITORY https://github.com/miruml/cpp-sdk.git 
-    GIT_TAG rename # replace with desired tag/branch/commit
+    GIT_TAG main # replace with desired tag/branch/commit
 )
 FetchContent_MakeAvailable(miru)
 
