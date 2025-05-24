@@ -1,5 +1,5 @@
 $miru_config_type_slug: "robot-features"
-$schema: "https://json-schema.org/draft/2020-12/schema"
+title: Robot Features Configuration Schema
 type: object
 properties:
   enable_autonomy:

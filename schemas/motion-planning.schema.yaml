@@ -1,4 +1,3 @@
-$schema: "http://json-schema.org/draft-07/schema#"
 $miru_config_type_slug: "motion-planning"
 title: Motion Planning Configuration Schema
 type: object

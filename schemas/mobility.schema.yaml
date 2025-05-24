@@ -1,6 +1,5 @@
 $miru_config_type_slug: "mobility"
-$schema: "https://json-schema.org/draft/2020-12/schema"
-title: Mobility
+title: Mobility Configuration Schema
 type: object
 properties:
   max_linear_speed_mps:
