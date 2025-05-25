@@ -4,7 +4,7 @@ type: object
 properties:
   max_linear_speed_mps:
     type: number
-    minimum: 0.1
+    minimum: 0.0
     maximum: 30
     default: 10
   max_angular_speed_radps:
