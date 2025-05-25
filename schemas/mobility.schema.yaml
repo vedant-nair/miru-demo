@@ -24,7 +24,7 @@ properties:
     properties:
       upload_interval_sec:
         type: integer
-        minimum: 10
+        minimum: 11
         maximum: 300
         default: 61
       heartbeat_interval_sec:
