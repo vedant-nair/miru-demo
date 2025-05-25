@@ -5,8 +5,8 @@ properties:
   max_linear_speed_mps:
     type: number
     minimum: 0.1
-    maximum: 5.0
-    default: 1.1
+    maximum: 30
+    default: 10
   max_angular_speed_radps:
     type: number
     minimum: 0.1
