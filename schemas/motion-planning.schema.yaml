@@ -30,7 +30,7 @@ properties:
     description: Planning timeout in seconds
     minimum: 0.1    
     maximum: 5.0    
-    default: 1.0
+    default: 1.1
   path_following:
     type: object
     required:
